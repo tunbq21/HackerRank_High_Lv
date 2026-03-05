@@ -95,3 +95,26 @@ print(kiem_tra_so_nguyen_to(11))
 print(kiem_tra_so_nguyen_to(15))
 
 # =========================================================================
+
+def min_max_avg(numbers:list) -> tuple:
+    if not numbers:
+        return None, None, None
+    min_num = min(numbers)
+    max_num = max(numbers)
+    avg_num = sum(numbers) / len(numbers)
+    return min_num, max_num, avg_num
+numbers = [3, 5, 7, 2, 8]
+min_num, max_num, avg_num = min_max_avg(numbers)
+print(f"Min: {min_num}, Max: {max_num}, Average: {avg_num:.1f}")
+
+
+# =========================================================================
+
+def reverse_string(s:str) -> str:
+    return s[::-1]
+print(reverse_string("Hello, World!"))
+
+def list_values_only(lst:list) -> list:
+    z = set(lst)
+    return list(z)
+print(list_values_only([1, 2, 2, 3, 4, 4, 5]))
